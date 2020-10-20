@@ -11,8 +11,8 @@ class uploadPostForm(forms.ModelForm):
     content = forms.CharField(label='content',required=True,
                                 help_text='Description of the Post',
                                 widget=forms.Textarea(attrs={'placeholder': 'Write Your Post Here ...','class':'newPostContent'}))
-    categoryChoices = [('0', 'Regular Post'),('1', 'Project'),('2', 'Complaint'),('3', 'Concern'),('4', 'Movement'),('5', 'Awareness')]
-    category = forms.ChoiceField (label='category',required=False,
+    categoryChoices = [('0', 'select'),('1', 'south korea'),('2', 'japan'),('3', 'cananda'),('4', 'usa'),('5', 'australia')]
+    country = forms.ChoiceField (label='category',required=False,
                                 widget=forms.Select(attrs={'title': 'Post Category','class':'optionSelection'}),choices=categoryChoices)
     axisStatusChoices = [('0', 'None'),('1', 'Planning Phase'),('2', 'On Going'),('3', 'Suspended'),('4', 'Completed/Ended'),('5','Cancelled')]
     axisStatus = forms.ChoiceField (label='axisStatus',required=False,
@@ -31,4 +31,4 @@ class uploadPostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ["postTitle","content","postImage","category","axisStatus","postLevel","budget","startDate","endDate"]
+        fields = ["postTitle","content","postImage","country","axisStatus","postLevel","budget","startDate","endDate"]
