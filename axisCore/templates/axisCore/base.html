@@ -53,45 +53,10 @@
     <div class='headContent'>
         <center style="padding-top:5em;padding-bottom:0em;">
            <h1 > Welcome to capstone design project</h1>
-           <h3>
-             <span style="font-size:28px;">
-               {% if user.is_authenticated %}
-                  <i class='fas fa-user-tie font-size:23px;'> {{ user.username }}</i>
-          
-                  <a style="font-size:15px;" href="{% url 'axisUsers:logout' %}"> Log Out </a>
-                {%else%}
-                  <i class="fas fa-user-secret" ></i>
-                  <h5 >student</h5>
-                  
-                {% endif %}
-              </span>
-           </h3>
+           
         </center><br>
       </div>
-    <div class="axisMenu" id="axisMenu">
-      <div class="axisMenuButtons">
-          <a class="axisMenuElements activeMenuElement" title="Home" href="{% url 'axisPosts:postView' %}">
-            <i class="fas fa-home" style="font-size: 1.5em;margin-bottom:0;padding-top:4px;"></i>
-            <i style="font-style:normal;font-size:10px;margin-top:0;padding-top: 0;">Home</i> 
-          </a>
-          <a class="axisMenuElements" title="PMS" href="{% url 'axisPMS:pmsPostView' %}">
-            <i class="fas fa-tools" style="font-size: 1.5em;margin-bottom:0;padding-top:4px;"></i>
-            <i style="font-style:normal;font-size:10px;margin-top:0;padding-top: 0;">about</i> 
-          </a>
-          <a class="axisMenuElements " title="Cool Ninja" href="#">
-            <i class="fas fa-user-ninja" style="font-size: 1.5em;margin-bottom:0;padding-top:4px;"></i>
-            <i style="font-style:normal;font-size:10px;margin-top:0;padding-top: 0;">menu1</i> 
-          </a>
-          <a class="axisMenuElements" title="Axis Network" href="#">
-            <i class="fas fa-globe" style="font-size: 1.5em;margin-bottom:0;padding-top:4px;"></i>
-            <i style="font-style:normal;font-size:10px;margin-top:0;padding-top: 0;">menu2</i> 
-          </a>
-          <a class="axisMenuElements" title="Terms" href="{% url 'axisUsers:termsAndConditions' %}">
-            <i class="fas fa-file-contract" style="font-size: 1.5em;margin-bottom:0;padding-top:4px;"></i>
-            <i style="font-style:normal;font-size:10px;margin-top:0;padding-top: 0;">menu3</i> 
-          </a>
-      </div>
-    </div>
+  
     {%if noSettingSidebar%}
       <div class="redirectBar" title="Go Back To Where You Came From">
         GO Back
@@ -109,7 +74,17 @@
       </div>
 
       <main class="mainContent">
-        {% block content %} {% endblock content %}
+        
+           <br>
+           <br>
+          <a style="border-radius: 25px;border: 2px solid green; padding: 20px;  background-color:gray;width: 2000px; height: 15px;" >for student </a>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <a style="border-radius: 25px;border: 2px solid green; padding: 20px;  background-color:gray;width: 2000px; height: 15px;" >for admin</a>
+      
       </main>
 
       {%if noSettingSidebar%}
